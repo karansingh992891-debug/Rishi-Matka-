@@ -1,45 +1,152 @@
-<div class="result-container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Result Page</title>
+    <style>
+        body {
+            background-color: #ffcd9e; /* Peach/Orange background */
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-bottom: 60px; /* Space for the bottom fixed buttons */
+        }
 
-<div class="game-card">
-<h3>🏏 IPL Match</h3>
-<p class="time">Start : 07:30 PM</p>
-<p class="time">End : 11:00 PM</p>
-<div class="result">LIVE</div>
-</div>
+        .result-block {
+            border: 1px solid red;
+            padding: 10px;
+            margin: 0;
+        }
 
-<div class="game-card">
-<h3>⚽ Football League</h3>
-<p class="time">Start : 06:00 PM</p>
-<p class="time">End : 08:00 PM</p>
-<div class="result">LIVE</div>
-</div>
+        .header-text {
+            font-style: italic;
+            font-weight: bold;
+            font-size: 1.15em;
+            margin-bottom: 5px;
+            color: black;
+        }
 
-<div class="game-card">
-<h3>🏸 Badminton</h3>
-<p class="time">Start : 10:00 AM</p>
-<p class="time">End : 12:00 PM</p>
-<div class="result">UPCOMING</div>
-</div>
+        .title {
+            color: #000066; /* Dark Blue */
+            font-style: italic;
+            font-weight: bold;
+            font-size: 1.25em;
+            text-transform: uppercase;
+            margin: 5px 0;
+        }
 
-<div class="game-card">
-<h3>🎾 Tennis</h3>
-<p class="time">Start : 04:00 PM</p>
-<p class="time">End : 06:30 PM</p>
-<div class="result">LIVE</div>
-</div>
+        .numbers {
+            color: #990033; /* Dark Magenta/Pink */
+            font-style: italic;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
 
-<div class="game-card">
-<h3>🏀 Basketball</h3>
-<p class="time">Start : 05:30 PM</p>
-<p class="time">End : 07:00 PM</p>
-<div class="result">UPCOMING</div>
-</div>
+        .hindi-text {
+            font-weight: bold;
+            color: black;
+            font-size: 1.1em;
+            margin: 8px 0 2px 0;
+        }
 
-<div class="game-card">
-<h3>🏐 Volleyball</h3>
-<p class="time">Start : 03:00 PM</p>
-<p class="time">End : 05:00 PM</p>
-<div class="result">LIVE</div>
-</div>
+        .refresh-btn {
+            background-color: #6633cc; /* Purple */
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            margin: 5px 0;
+            cursor: pointer;
+            box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
 
-</div>
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: transparent;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            z-index: 100;
+        }
+
+        .nav-btn {
+            background-color: #003399; /* Dark Blue */
+            color: white;
+            border: 1px solid white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            font-style: italic;
+            font-size: 0.9em;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="result-block">
+        <div class="header-text">Sabse Tezz Live Result Yahi Milega</div>
+        <div class="title">SRIDEVI</div>
+        <div class="numbers">126-90-488</div>
+        <button class="refresh-btn">Refresh</button>
+        <div class="hindi-text">सबसे तेज सबसे सही</div>
+    </div>
+
+    <div class="result-block">
+        <div class="title">TIME BAZAR</div>
+        <div class="numbers">Loading...</div>
+        <div class="hindi-text">खबर लाइन चालू है</div>
+        <button class="refresh-btn">Refresh</button>
+    </div>
+
+    <div class="result-block">
+        <div class="title">MAIN SRIDEVI DAY</div>
+        <div class="numbers">Loading...</div>
+        <button class="refresh-btn">Refresh</button>
+    </div>
+
+    <div class="result-block">
+        <div class="title">NEW TIME BAZAR</div>
+        <div class="numbers">Loading...</div>
+        <div class="hindi-text">खबर लाइन चालू है</div>
+        <button class="refresh-btn">Refresh</button>
+    </div>
+
+    <div class="result-block">
+        <div class="title">PADMAVATHI</div>
+        <div class="numbers">138-23-337</div>
+        <button class="refresh-btn">Refresh</button>
+    </div>
+
+    <div class="result-block">
+        <div class="title">RAJDHANI MORNING [main]</div>
+        <div class="numbers">377-73-300</div>
+        <button class="refresh-btn">Refresh</button>
+    </div>
+
+    <div class="result-block">
+        <div class="title">MADHUR MORNING</div>
+        <div class="numbers">289-94-400</div>
+        <button class="refresh-btn">Refresh</button>
+    </div>
+    
+    <div class="result-block" style="border-bottom: none; height: 50px;">
+        <div class="title">MAIN SRIDEVI</div>
+    </div>
+
+    <!-- Bottom Fixed Navigation Buttons -->
+    <div class="bottom-nav">
+        <button class="nav-btn">Matka Play</button>
+        <button class="nav-btn">VIP Zone</button>
+        <button class="nav-btn">REFRESH</button>
+    </div>
+
+</body>
+</html>
